@@ -1,5 +1,7 @@
+//The abstract Component Room
 public abstract class Room
 {
-    public abstract void getDescription();
-    public abstract double getCost();
+	public abstract double getCost ();
+
+	public abstract boolean isVacant ();
 }
