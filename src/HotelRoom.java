@@ -5,22 +5,32 @@ public class HotelRoom extends Room
 	// single room must be handled by here
 	private boolean vacant;
 
-	public HotelRoom ()
+	public HotelRoom()
 	{
 		vacant = true;
 	}
 
-	public double getCost ()
+	public int getCost()
 	{
 		return 50;
 	}
 
-	public boolean isVacant ()
+	public boolean isVacant()
 	{
 		return vacant;
 	}
 
-	public String toString ()
+	public void book()
+	{
+		vacant = false;
+	}
+
+	public void vacate()
+	{
+		vacant = true;
+	}
+
+	public String toString()
 	{
 		return "Hotel Room";
 	}
