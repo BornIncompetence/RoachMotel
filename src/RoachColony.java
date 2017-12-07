@@ -42,7 +42,7 @@ public class RoachColony implements Observer
 	{
 		return days;
 	}
-
+	
 	public void setRoom(int room)
 	{
 		this.room = room;

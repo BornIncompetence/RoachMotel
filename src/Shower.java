@@ -14,25 +14,9 @@ public class Shower extends HotelAmenity
 	{
 		return room.getCost() + COST;
 	}
-	/*
-	public boolean isVacant()
-	{
-		return room.isVacant();
-	}
 	
-	public void book()
-	{
-	
-	}
-	
-	public void vacate()
-	{
-	
-	}
-	*/
 	public String toString()
 	{
 		return room.toString() + ", with spray resistant shower";
 	}
 }
-

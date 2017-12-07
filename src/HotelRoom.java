@@ -12,22 +12,6 @@ public class HotelRoom extends Room
 	{
 		return 50;
 	}
-	/*
-	public boolean isVacant()
-	{
-		return vacant;
-	}
-	
-	public void book()
-	{
-		vacant = false;
-	}
-	
-	public void vacate()
-	{
-		vacant = true;
-	}
-	*/
 	public String toString()
 	{
 		return "Hotel Room";

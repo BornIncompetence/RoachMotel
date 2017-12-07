@@ -16,11 +16,9 @@ public class Hotel implements Subject
 	
 	private Hotel() {}
 	
-	
 	public static Hotel getInstance()
 	{
-		if (hotel == null)
-			hotel = new Hotel();
+		if (hotel == null) hotel = new Hotel();
 		return hotel;
 	}
 	
@@ -63,7 +61,6 @@ public class Hotel implements Subject
 			r.setRoom(roomFinder);
 			//registerObserver(r);
 		}
-		
 		else
 		{
 			queue.add(r);
@@ -82,11 +79,9 @@ public class Hotel implements Subject
 		int roomFinder = r.getRoom();
 		int totalCost = r.getDays() * room[roomFinder].getCost();
 		System.out.println("Your price is:" + totalCost);
-
-		if(queue.isEmpty())
-			room[roomFinder] = null;
-		else
-			checkIn(queue.remove());
+		
+		if (queue.isEmpty()) room[roomFinder] = null;
+		else checkIn(queue.remove());
 	}
 	
 	// If any of the rooms are vacant, return true otherwise false
@@ -99,7 +94,7 @@ public class Hotel implements Subject
 		}
 		return false;
 	}
-	// Still need to figure out what to do with these
+	
 	public void registerObserver(Observer o)
 	{
 		observers.add(o);
