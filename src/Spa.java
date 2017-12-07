@@ -1,26 +1,37 @@
 //A concrete decorator for Room
 public class Spa extends HotelAmenity
 {
-	protected Room room = null;
-	private static final double COST = 20;
-
-	public Spa (Room room)
+	protected Room room;
+	private static final int COST = 20;
+  
+	public Spa(Room room)
 	{
 		this.room = room;
+		this.hasShower = room.hasShower;
 	}
 
-	public double getCost ()
+	public int getCost()
 	{
 		return room.getCost() + COST;
 	}
-
-	public boolean isVacant ()
+	/*
+	public boolean isVacant()
 	{
 		return room.isVacant();
 	}
 
-	public String toString ()
+	public void book()
 	{
-		return room.toString() + " with Spa";
+		room.book();
+	}
+
+	public void vacate()
+	{
+		room.vacate();
+	}
+	*/
+	public String toString()
+	{
+		return room.toString() + ", with Spa";
 	}
 }

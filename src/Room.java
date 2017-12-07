@@ -1,7 +1,14 @@
 //The abstract Component Room
 public abstract class Room
 {
-	public abstract double getCost ();
-
-	public abstract boolean isVacant ();
+	protected boolean hasShower = false;
+	
+	public abstract int getCost();
+	/*
+	public abstract boolean isVacant();
+	
+	public abstract void book();
+	
+	public abstract void vacate();
+	*/
 }

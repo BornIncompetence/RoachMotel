@@ -1,13 +1,13 @@
 //A concrete decorator for Room
-public class FoodBar extends HotelAmenity
+public class Shower extends HotelAmenity
 {
 	protected Room room;
-	private static final int COST = 10;
+	private static final int COST = 25;
 	
-	public FoodBar(Room room)
+	public Shower(Room room)
 	{
 		this.room = room;
-		this.hasShower = room.hasShower;
+		this.hasShower = true;
 	}
 	
 	public int getCost()
@@ -22,16 +22,17 @@ public class FoodBar extends HotelAmenity
 	
 	public void book()
 	{
-		room.book();
+	
 	}
 	
 	public void vacate()
 	{
-		room.vacate();
+	
 	}
 	*/
 	public String toString()
 	{
-		return room.toString() + ", with FoodBar";
+		return room.toString() + ", with spray resistant shower";
 	}
 }
+
