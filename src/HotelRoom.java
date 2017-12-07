@@ -12,6 +12,7 @@ public class HotelRoom extends Room
 	{
 		return 50;
 	}
+	
 	public String toString()
 	{
 		return "Hotel Room";

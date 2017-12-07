@@ -1,4 +1,8 @@
 public interface Observer
 {
-	void update(boolean vacant);
+	void update();
+	
+	int getDays();
+	
+	void setDays(int stayTime);
 }
