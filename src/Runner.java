@@ -2,7 +2,7 @@ public class Runner
 {
 	public static void main(String[] args)
 	{
-		Hotel california = Hotel.getInstance(3);
+		Hotel california = Hotel.getInstance(1);
 		// If starting population is higher than growRate, one party will
 		// leave the population lower than what it started with.
 		// A population of 0 is still able to check out of the Hotel
@@ -15,6 +15,8 @@ public class Runner
 		roach3.party();
 		california.nextDay();
 		roach4.party();
+                california.nextDay();
+                california.nextDay();
 		
 		while(california.isVacant())
 			california.nextDay();
