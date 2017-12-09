@@ -66,6 +66,8 @@ public class Hotel implements Subject
 		in.nextLine();
 		o.setDays(days);
 		guestList.put(o, roomNumber);
+                System.out.println("You have been checked in to room # " + roomNumber + " for " + days + " days. It's a " + room[roomNumber]);
+                System.out.println();
 	}
 	// Returns true if any Room is open, otherwise return false
 	public boolean isVacant()

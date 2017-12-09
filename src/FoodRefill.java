@@ -7,7 +7,6 @@ public class FoodRefill extends HotelAmenity
 	public FoodRefill(Room room)
 	{
 		this.room = room;
-		this.hasShower = room.hasShower;
 	}
 	
 	public int getCost()

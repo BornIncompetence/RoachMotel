@@ -7,7 +7,6 @@ public class Spa extends HotelAmenity
 	public Spa(Room room)
 	{
 		this.room = room;
-		this.hasShower = room.hasShower;
 	}
 
 	public int getCost()

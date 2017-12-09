@@ -1,11 +1,9 @@
 //A concrete Component of Room
 public class HotelRoom extends Room
-{
-	private boolean vacant;
-	
+{	
 	public HotelRoom()
 	{
-		vacant = false;
+		hasShower = false;
 	}
 	
 	public int getCost()
@@ -15,6 +13,6 @@ public class HotelRoom extends Room
 	
 	public String toString()
 	{
-		return "Hotel Room";
+		return "Basic Hotel Room";
 	}
 }

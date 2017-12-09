@@ -7,7 +7,6 @@ public class FoodBar extends HotelAmenity
 	public FoodBar(Room room)
 	{
 		this.room = room;
-		this.hasShower = room.hasShower;
 	}
 	
 	public int getCost()
