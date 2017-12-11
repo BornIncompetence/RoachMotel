@@ -14,22 +14,7 @@ public class FoodBar extends HotelAmenity
 	{
 		return room.getCost() + COST;
 	}
-	/*
-	public boolean isVacant()
-	{
-		return room.isVacant();
-	}
 	
-	public void book()
-	{
-		room.book();
-	}
-	
-	public void vacate()
-	{
-		room.vacate();
-	}
-	*/
 	public String toString()
 	{
 		return room.toString() + ", with FoodBar";

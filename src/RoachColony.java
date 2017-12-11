@@ -1,11 +1,11 @@
 public class RoachColony implements Observer
 {
+	private Hotel home;
 	private String name;
 	private int population;
 	private int growRate;
-	private Hotel home;
-	private int room;
 	private int days;
+	private int daysLeft;
 	
 	public RoachColony(Hotel hotel, String colonyName, int numOfGuest, int growthFactor)
 	{
@@ -13,38 +13,43 @@ public class RoachColony implements Observer
 		name = colonyName;
 		population = numOfGuest;
 		growRate = growthFactor;
+		home.registerObserver(this);
 	}
-	
+	// Modifies the population of RoachColony
 	public void party()
 	{
+		if(home == null)
+		{
+			System.out.println("This Roach doesn't have a Room to party in!");
+			return;
+		}
 		population = population + growRate;
 		double sprayReduction = (home.spray(this)) ? 0.75 : 0.5;
 		population = (int)(population * sprayReduction);
+		System.out.println(name + " just threw a wild party!");
 	}
-	
-	public void update(boolean vacant)
+	// Decrements the daysLeft and calls removeObserver if it reaches 0
+	public void update()
 	{
-		/*isVacant = vacant;*/
-		//Perhaps use this function to check in or check out.
+		daysLeft--;
+		System.out.println(name + " will be staying for " + daysLeft + " more day(s)");
+		if(daysLeft == 0)
+			home.removeObserver(this);
 	}
-	
-	public int getRoom()
+	// Sets days and daysLeft to stayTime
+	public void setDays(int stayTime)
 	{
-		return room;
+		days = stayTime;
+		daysLeft = stayTime;
 	}
-	
-	public void setDays(int days)
-	{
-		this.days = days;
-	}
-	
+	// Returns days, not daysLeft
 	public int getDays()
 	{
 		return days;
 	}
-
-	public void setRoom(int room)
+	
+	public String toString()
 	{
-		this.room = room;
+		return name;
 	}
 }

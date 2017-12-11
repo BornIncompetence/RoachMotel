@@ -7,26 +7,14 @@ public class FoodRefill extends HotelAmenity
 	public FoodRefill(Room room)
 	{
 		this.room = room;
+		this.hasShower = room.hasShower;
 	}
 	
 	public int getCost()
 	{
 		return room.getCost() + COST;
 	}
-	/*
-	public boolean isVacant()
-	{
-		return room.isVacant();
-	}
 	
-	public void book()
-	{
-	}
-	
-	public void vacate()
-	{
-	}
-	*/
 	public String toString()
 	{
 		return room.toString() + ", with FoodBar auto refill";
