@@ -68,6 +68,16 @@ public class Hotel implements Subject
 		guestList.put(o, roomNumber);
 	}
 	// Returns true if any Room is open, otherwise return false
+	public boolean isEmpty()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (room[i] != null)
+				return false;
+		}
+		return true;
+	}
+	// Returns true if any Room is open, otherwise return false
 	public boolean isVacant()
 	{
 		for (int i = 0; i < size; i++)

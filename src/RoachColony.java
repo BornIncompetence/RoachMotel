@@ -18,13 +18,17 @@ public class RoachColony implements Observer
 	// Modifies the population of RoachColony
 	public void party()
 	{
-		if(home == null)
+		population = population + growRate;
+		double sprayReduction = 0;
+		try
 		{
-			System.out.println("This Roach doesn't have a Room to party in!");
+			sprayReduction = (home.spray(this)) ? 0.75 : 0.5;
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println(name + " doesn't have a Room to party in!");
 			return;
 		}
-		population = population + growRate;
-		double sprayReduction = (home.spray(this)) ? 0.75 : 0.5;
 		population = (int)(population * sprayReduction);
 		System.out.println(name + " just threw a wild party!");
 	}

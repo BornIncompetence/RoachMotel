@@ -13,10 +13,10 @@ public class Runner
 		roach1.party();
 		roach2.party();
 		roach3.party();
-		california.nextDay();
 		roach4.party();
+		california.nextDay();
 		
-		while(california.isVacant())
+		while(!california.isEmpty())
 			california.nextDay();
 	}
 }
